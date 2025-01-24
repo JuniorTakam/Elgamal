@@ -1,0 +1,1575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>804</width>
+    <height>756</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ElGamal</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#MainWindow{
+	background-color: rgba(255, 255, 255,255);
+}
+#centralwidget{
+	background-color: rgba(255, 255, 255,255);
+}
+QAction:hover{
+	background-color: rgba(41, 52, 61,255);
+	color: rgba(255, 255, 255,255);
+}
+#menuConnexion{
+	background-color: rgba(31, 42, 51,255);
+	color: rgba(255, 255, 255,255);
+}
+
+#menuAide{
+	background-color: rgba(31, 42, 51,255);
+	color: rgba(255, 255, 255,255);
+}
+
+
+
+
+
+
+
+#pushButton_dechiffrer, #pushButton_enregistrer, #pushButton_chiffrer, #pushButton_envoyer, #pushButton_ouvrir_fichier_clair, #pushButton_ouvrir_cle_chiff, #pushButton_ouvrir_cle_dechiff, #pushButton_ouvrir_fichier_chiffre, #pushButton_generer_cle, #pushButton_ouvrir_fichie_cle_privee, #pushButton_generer_modulus, #pushButton_generer_generateur, #pushButton_ouvrir_fichier_modulus{
+border-width:0px;
+font: 12pt &quot;Arial Black&quot;;
+font-family:bold;
+background-color: rgba(31, 42, 51,255);
+background-color:rgba(128, 135, 223,255);
+background-color:rgba(75, 208, 48,255);
+color: rgba(255, 255, 255,255);
+
+border-width:2px;
+	border-style:solid;
+	border-color:rgba(35, 32, 25,255);
+	border-radius:15px;
+}
+
+
+
+
+
+
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="styleSheet">
+         <string notr="true">border-width:0px 0px 0px 0px;
+border-style:solid;
+border-color:rgba(200, 200, 200,255);</string>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item row="0" column="0">
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QGroupBox" name="groupBox_barre_outil">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>58</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color:rgba(128, 135, 223,255);
+
+background-color:rgba(100, 150, 120,255);</string>
+             </property>
+             <property name="title">
+              <string/>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_3">
+              <property name="leftMargin">
+               <number>5</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>5</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item row="0" column="0">
+               <layout class="QHBoxLayout" name="horizontalLayout">
+                <item>
+                 <widget class="QGroupBox" name="groupBox_4">
+                  <property name="maximumSize">
+                   <size>
+                    <width>100</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">
+border-width:0px 0px 0px 0px;
+border-style:solid;
+border-color:rgba(200, 200, 200,255);
+
+background-color:rgba(100, 150, 120,255);</string>
+                  </property>
+                  <property name="title">
+                   <string/>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_4">
+                   <property name="leftMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>5</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>5</number>
+                   </property>
+                   <item row="0" column="0">
+                    <layout class="QVBoxLayout" name="verticalLayout_3">
+                     <item>
+                      <widget class="QLabel" name="label_3">
+                       <property name="styleSheet">
+                        <string notr="true">border-width:0px;
+font: 10pt &quot;Times New Roman&quot;;
+color: rgba(255, 255, 255,255);</string>
+                       </property>
+                       <property name="text">
+                        <string>SUP'PTIC</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_4">
+                       <property name="styleSheet">
+                        <string notr="true">border-width:0px;
+font: 8pt &quot;Times New Roman&quot;;
+color: rgba(255, 255, 255,255);</string>
+                       </property>
+                       <property name="text">
+                        <string>GROUPE 1</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label">
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">border-width:0px;
+font: 14pt &quot;Arial Black&quot;;
+font-family:bold;
+color: rgba(255, 255, 255,255);
+
+background-color:rgba(100, 150, 120,255);</string>
+                  </property>
+                  <property name="text">
+                   <string>Application de chiffrement ElGamal</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBox_3">
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="title">
+              <string/>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_5">
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item row="0" column="0">
+               <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,1">
+                <property name="spacing">
+                 <number>15</number>
+                </property>
+                <item>
+                 <widget class="QGroupBox" name="groupBox_6">
+                  <property name="title">
+                   <string/>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_7">
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>0</number>
+                   </property>
+                   <item row="0" column="0">
+                    <layout class="QVBoxLayout" name="verticalLayout_6">
+                     <item>
+                      <widget class="QGroupBox" name="groupBox_8">
+                       <property name="title">
+                        <string/>
+                       </property>
+                       <layout class="QGridLayout" name="gridLayout_9">
+                        <property name="bottomMargin">
+                         <number>0</number>
+                        </property>
+                        <item row="0" column="0">
+                         <layout class="QHBoxLayout" name="horizontalLayout_emission" stretch="1,1">
+                          <item>
+                           <widget class="QGroupBox" name="groupBox_11">
+                            <property name="title">
+                             <string/>
+                            </property>
+                            <layout class="QGridLayout" name="gridLayout_10">
+                             <property name="leftMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="topMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="rightMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="bottomMargin">
+                              <number>0</number>
+                             </property>
+                             <item row="0" column="0">
+                              <layout class="QVBoxLayout" name="verticalLayout_7">
+                               <property name="spacing">
+                                <number>5</number>
+                               </property>
+                               <item>
+                                <widget class="QLabel" name="label_5">
+                                 <property name="text">
+                                  <string/>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QGroupBox" name="groupBox_15">
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>16777215</width>
+                                   <height>40</height>
+                                  </size>
+                                 </property>
+                                 <property name="title">
+                                  <string/>
+                                 </property>
+                                 <layout class="QGridLayout" name="gridLayout_12">
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item row="0" column="0">
+                                   <layout class="QHBoxLayout" name="horizontalLayout_5">
+                                    <property name="spacing">
+                                     <number>10</number>
+                                    </property>
+                                    <item>
+                                     <widget class="QPushButton" name="pushButton_generer_cle">
+                                      <property name="minimumSize">
+                                       <size>
+                                        <width>300</width>
+                                        <height>40</height>
+                                       </size>
+                                      </property>
+                                      <property name="maximumSize">
+                                       <size>
+                                        <width>16777215</width>
+                                        <height>40</height>
+                                       </size>
+                                      </property>
+                                      <property name="styleSheet">
+                                       <string notr="true"/>
+                                      </property>
+                                      <property name="text">
+                                       <string>Generer les Clés ( publique et privée)</string>
+                                      </property>
+                                     </widget>
+                                    </item>
+                                   </layout>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QGroupBox" name="groupBox_14">
+                                 <property name="title">
+                                  <string/>
+                                 </property>
+                                 <layout class="QGridLayout" name="gridLayout_13">
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item row="0" column="0">
+                                   <layout class="QHBoxLayout" name="horizontalLayout_6">
+                                    <property name="spacing">
+                                     <number>10</number>
+                                    </property>
+                                    <item>
+                                     <widget class="QGroupBox" name="groupBox_17">
+                                      <property name="minimumSize">
+                                       <size>
+                                        <width>100</width>
+                                        <height>0</height>
+                                       </size>
+                                      </property>
+                                      <property name="title">
+                                       <string/>
+                                      </property>
+                                      <layout class="QGridLayout" name="gridLayout_15">
+                                       <property name="leftMargin">
+                                        <number>0</number>
+                                       </property>
+                                       <property name="topMargin">
+                                        <number>0</number>
+                                       </property>
+                                       <property name="rightMargin">
+                                        <number>0</number>
+                                       </property>
+                                       <property name="bottomMargin">
+                                        <number>0</number>
+                                       </property>
+                                       <item row="0" column="0">
+                                        <layout class="QVBoxLayout" name="verticalLayout_9">
+                                         <property name="spacing">
+                                          <number>10</number>
+                                         </property>
+                                         <item>
+                                          <widget class="QGroupBox" name="groupBox_19">
+                                           <property name="minimumSize">
+                                            <size>
+                                             <width>0</width>
+                                             <height>50</height>
+                                            </size>
+                                           </property>
+                                           <property name="title">
+                                            <string/>
+                                           </property>
+                                           <layout class="QGridLayout" name="gridLayout_18">
+                                            <property name="leftMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="topMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="rightMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="bottomMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <item row="0" column="0">
+                                             <layout class="QHBoxLayout" name="horizontalLayout_8">
+                                              <item>
+                                               <widget class="QLabel" name="label_7">
+                                                <property name="minimumSize">
+                                                 <size>
+                                                  <width>0</width>
+                                                  <height>35</height>
+                                                 </size>
+                                                </property>
+                                                <property name="maximumSize">
+                                                 <size>
+                                                  <width>16777215</width>
+                                                  <height>35</height>
+                                                 </size>
+                                                </property>
+                                                <property name="styleSheet">
+                                                 <string notr="true">border-width:0px;
+font: 12pt &quot;Arial Black&quot;;
+font-family:bold;
+
+padding-left:10px;
+
+
+
+</string>
+                                                </property>
+                                                <property name="text">
+                                                 <string>Texte</string>
+                                                </property>
+                                                <property name="alignment">
+                                                 <set>Qt::AlignCenter</set>
+                                                </property>
+                                               </widget>
+                                              </item>
+                                              <item>
+                                               <widget class="QPushButton" name="pushButton_ouvrir_fichier_clair">
+                                                <property name="minimumSize">
+                                                 <size>
+                                                  <width>100</width>
+                                                  <height>40</height>
+                                                 </size>
+                                                </property>
+                                                <property name="maximumSize">
+                                                 <size>
+                                                  <width>100</width>
+                                                  <height>40</height>
+                                                 </size>
+                                                </property>
+                                                <property name="styleSheet">
+                                                 <string notr="true"/>
+                                                </property>
+                                                <property name="text">
+                                                 <string>Ouvrir</string>
+                                                </property>
+                                               </widget>
+                                              </item>
+                                             </layout>
+                                            </item>
+                                           </layout>
+                                          </widget>
+                                         </item>
+                                         <item>
+                                          <widget class="QGroupBox" name="groupBox_entrer_texte">
+                                           <property name="minimumSize">
+                                            <size>
+                                             <width>0</width>
+                                             <height>50</height>
+                                            </size>
+                                           </property>
+                                           <property name="title">
+                                            <string/>
+                                           </property>
+                                           <layout class="QGridLayout" name="gridLayout_21">
+                                            <property name="leftMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="topMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="rightMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="bottomMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <item row="0" column="0">
+                                             <layout class="QHBoxLayout" name="horizontalLayout_10">
+                                              <item>
+                                               <widget class="QTextEdit" name="textEdit_entrer_texte">
+                                                <property name="styleSheet">
+                                                 <string notr="true">border-width:0px;
+font: 12pt &quot;Arial Black&quot;;
+font-family:bold;
+
+padding-left:10px;
+color: rgba(25, 25, 25,255);
+
+border-width:3px;
+	border-style:solid;
+	border-color:rgba(128, 135, 223,255);
+	border-radius:15px;
+
+border-color:rgba(100, 150, 120,255);
+
+
+
+</string>
+                                                </property>
+                                                <property name="html">
+                                                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'12'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                                                </property>
+                                               </widget>
+                                              </item>
+                                             </layout>
+                                            </item>
+                                           </layout>
+                                          </widget>
+                                         </item>
+                                        </layout>
+                                       </item>
+                                      </layout>
+                                     </widget>
+                                    </item>
+                                   </layout>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                              </layout>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QGroupBox" name="groupBox_12">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>0</height>
+                             </size>
+                            </property>
+                            <property name="title">
+                             <string/>
+                            </property>
+                            <layout class="QGridLayout" name="gridLayout_16">
+                             <property name="leftMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="topMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="rightMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="bottomMargin">
+                              <number>0</number>
+                             </property>
+                             <item row="0" column="0">
+                              <layout class="QVBoxLayout" name="verticalLayout_10">
+                               <item>
+                                <widget class="QGroupBox" name="groupBox_16">
+                                 <property name="minimumSize">
+                                  <size>
+                                   <width>0</width>
+                                   <height>0</height>
+                                  </size>
+                                 </property>
+                                 <property name="title">
+                                  <string/>
+                                 </property>
+                                 <layout class="QGridLayout" name="gridLayout_22">
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item row="0" column="0">
+                                   <layout class="QHBoxLayout" name="horizontalLayout_3">
+                                    <item>
+                                     <widget class="QLabel" name="label_8">
+                                      <property name="minimumSize">
+                                       <size>
+                                        <width>0</width>
+                                        <height>35</height>
+                                       </size>
+                                      </property>
+                                      <property name="maximumSize">
+                                       <size>
+                                        <width>16777215</width>
+                                        <height>35</height>
+                                       </size>
+                                      </property>
+                                      <property name="styleSheet">
+                                       <string notr="true">border-width:0px;
+font: 12pt &quot;Arial Black&quot;;
+font-family:bold;
+color: rgba(255, 255, 255,255);
+padding-left:10px;
+background-color: rgba(128, 135, 223,255);
+
+background-color: rgba(100, 150, 120,255);
+
+
+
+
+</string>
+                                      </property>
+                                      <property name="text">
+                                       <string>Texte Chiffré</string>
+                                      </property>
+                                      <property name="alignment">
+                                       <set>Qt::AlignCenter</set>
+                                      </property>
+                                     </widget>
+                                    </item>
+                                   </layout>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QTextBrowser" name="textBrowser_cryptogramme">
+                                 <property name="styleSheet">
+                                  <string notr="true">border-width:0px;
+font: 12pt &quot;Arial Black&quot;;
+font-family:bold;
+
+padding-left:10px;
+color: rgba(25, 25, 25,255);
+
+border-width:3px;
+	border-style:solid;
+	border-color:rgba(128, 135, 223,255);
+	border-radius:15px;
+
+
+border-color:rgba(100, 150, 120,255);
+</string>
+                                 </property>
+                                 <property name="html">
+                                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'12'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QGroupBox" name="groupBox_18">
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>16777215</width>
+                                   <height>45</height>
+                                  </size>
+                                 </property>
+                                 <property name="title">
+                                  <string/>
+                                 </property>
+                                 <layout class="QGridLayout" name="gridLayout_17">
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item row="0" column="0">
+                                   <layout class="QHBoxLayout" name="horizontalLayout_7">
+                                    <item>
+                                     <widget class="QPushButton" name="pushButton_chiffrer">
+                                      <property name="minimumSize">
+                                       <size>
+                                        <width>100</width>
+                                        <height>40</height>
+                                       </size>
+                                      </property>
+                                      <property name="maximumSize">
+                                       <size>
+                                        <width>100</width>
+                                        <height>40</height>
+                                       </size>
+                                      </property>
+                                      <property name="styleSheet">
+                                       <string notr="true"/>
+                                      </property>
+                                      <property name="text">
+                                       <string>Chiffrer</string>
+                                      </property>
+                                     </widget>
+                                    </item>
+                                    <item>
+                                     <widget class="QLabel" name="label_10">
+                                      <property name="text">
+                                       <string/>
+                                      </property>
+                                     </widget>
+                                    </item>
+                                   </layout>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                              </layout>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                         </layout>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QGroupBox" name="groupBox_5">
+                  <property name="styleSheet">
+                   <string notr="true"/>
+                  </property>
+                  <property name="title">
+                   <string/>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_6">
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>0</number>
+                   </property>
+                   <item row="0" column="0">
+                    <layout class="QVBoxLayout" name="verticalLayout_5">
+                     <item>
+                      <widget class="QGroupBox" name="groupBox_7">
+                       <property name="title">
+                        <string/>
+                       </property>
+                       <layout class="QGridLayout" name="gridLayout_8">
+                        <property name="topMargin">
+                         <number>11</number>
+                        </property>
+                        <property name="bottomMargin">
+                         <number>0</number>
+                        </property>
+                        <item row="0" column="0">
+                         <layout class="QHBoxLayout" name="horizontalLayout_reception" stretch="1,1">
+                          <property name="sizeConstraint">
+                           <enum>QLayout::SetDefaultConstraint</enum>
+                          </property>
+                          <item>
+                           <widget class="QGroupBox" name="groupBox_20">
+                            <property name="title">
+                             <string/>
+                            </property>
+                            <layout class="QGridLayout" name="gridLayout_26">
+                             <property name="leftMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="topMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="rightMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="bottomMargin">
+                              <number>0</number>
+                             </property>
+                             <item row="0" column="0">
+                              <layout class="QVBoxLayout" name="verticalLayout_14">
+                               <property name="spacing">
+                                <number>5</number>
+                               </property>
+                               <item>
+                                <widget class="QGroupBox" name="groupBox_29">
+                                 <property name="title">
+                                  <string/>
+                                 </property>
+                                 <layout class="QGridLayout" name="gridLayout_29">
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item row="0" column="0">
+                                   <layout class="QHBoxLayout" name="horizontalLayout_15">
+                                    <property name="spacing">
+                                     <number>10</number>
+                                    </property>
+                                    <item>
+                                     <widget class="QGroupBox" name="groupBox_30">
+                                      <property name="minimumSize">
+                                       <size>
+                                        <width>100</width>
+                                        <height>0</height>
+                                       </size>
+                                      </property>
+                                      <property name="title">
+                                       <string/>
+                                      </property>
+                                      <layout class="QGridLayout" name="gridLayout_30">
+                                       <property name="leftMargin">
+                                        <number>0</number>
+                                       </property>
+                                       <property name="topMargin">
+                                        <number>0</number>
+                                       </property>
+                                       <property name="rightMargin">
+                                        <number>0</number>
+                                       </property>
+                                       <property name="bottomMargin">
+                                        <number>0</number>
+                                       </property>
+                                       <item row="0" column="0">
+                                        <layout class="QVBoxLayout" name="verticalLayout_15">
+                                         <property name="spacing">
+                                          <number>7</number>
+                                         </property>
+                                         <item>
+                                          <widget class="QGroupBox" name="groupBox_31">
+                                           <property name="minimumSize">
+                                            <size>
+                                             <width>0</width>
+                                             <height>35</height>
+                                            </size>
+                                           </property>
+                                           <property name="maximumSize">
+                                            <size>
+                                             <width>16777215</width>
+                                             <height>40</height>
+                                            </size>
+                                           </property>
+                                           <property name="title">
+                                            <string/>
+                                           </property>
+                                           <layout class="QGridLayout" name="gridLayout_31">
+                                            <property name="leftMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="topMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="rightMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="bottomMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <item row="0" column="0">
+                                             <layout class="QHBoxLayout" name="horizontalLayout_16">
+                                              <item>
+                                               <widget class="QLabel" name="label_15">
+                                                <property name="minimumSize">
+                                                 <size>
+                                                  <width>0</width>
+                                                  <height>35</height>
+                                                 </size>
+                                                </property>
+                                                <property name="maximumSize">
+                                                 <size>
+                                                  <width>16777215</width>
+                                                  <height>35</height>
+                                                 </size>
+                                                </property>
+                                                <property name="styleSheet">
+                                                 <string notr="true">border-width:0px;
+font: 12pt &quot;Arial Black&quot;;
+font-family:bold;
+color: rgba(255, 255, 255,255);
+padding-left:10px;
+background-color: rgba(128, 135, 223,255);
+
+background-color: rgba(100, 150, 120,255);
+
+
+
+
+</string>
+                                                </property>
+                                                <property name="text">
+                                                 <string>Dechiffrage</string>
+                                                </property>
+                                                <property name="alignment">
+                                                 <set>Qt::AlignCenter</set>
+                                                </property>
+                                               </widget>
+                                              </item>
+                                             </layout>
+                                            </item>
+                                           </layout>
+                                          </widget>
+                                         </item>
+                                         <item>
+                                          <widget class="QGroupBox" name="groupBox_32">
+                                           <property name="maximumSize">
+                                            <size>
+                                             <width>16777215</width>
+                                             <height>60</height>
+                                            </size>
+                                           </property>
+                                           <property name="title">
+                                            <string/>
+                                           </property>
+                                           <layout class="QGridLayout" name="gridLayout_32">
+                                            <property name="leftMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="topMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="rightMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="bottomMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <item row="0" column="0">
+                                             <layout class="QHBoxLayout" name="horizontalLayout_17">
+                                              <property name="spacing">
+                                               <number>10</number>
+                                              </property>
+                                              <item>
+                                               <widget class="QLabel" name="label_16">
+                                                <property name="minimumSize">
+                                                 <size>
+                                                  <width>80</width>
+                                                  <height>35</height>
+                                                 </size>
+                                                </property>
+                                                <property name="maximumSize">
+                                                 <size>
+                                                  <width>80</width>
+                                                  <height>35</height>
+                                                 </size>
+                                                </property>
+                                                <property name="styleSheet">
+                                                 <string notr="true">border-width:0px;
+font: 12pt &quot;Arial Black&quot;;
+font-family:bold;
+color: rgba(25, 25, 25,255);
+</string>
+                                                </property>
+                                                <property name="text">
+                                                 <string>Modulus</string>
+                                                </property>
+                                                <property name="alignment">
+                                                 <set>Qt::AlignCenter</set>
+                                                </property>
+                                               </widget>
+                                              </item>
+                                              <item>
+                                               <widget class="QLineEdit" name="lineEdit_fichier_a_dechiffre">
+                                                <property name="minimumSize">
+                                                 <size>
+                                                  <width>0</width>
+                                                  <height>38</height>
+                                                 </size>
+                                                </property>
+                                                <property name="maximumSize">
+                                                 <size>
+                                                  <width>16777215</width>
+                                                  <height>38</height>
+                                                 </size>
+                                                </property>
+                                                <property name="styleSheet">
+                                                 <string notr="true">border-width:0px;
+font: 12pt &quot;Arial Black&quot;;
+font-family:bold;
+padding-left:10px;
+color: rgba(25, 25, 25,255);
+
+border-width:3px;
+	border-style:solid;
+	border-color:rgba(128, 135, 223,255);
+	border-radius:15px;
+
+border-color:rgba(100, 150, 120,255);
+</string>
+                                                </property>
+                                               </widget>
+                                              </item>
+                                              <item>
+                                               <widget class="QPushButton" name="pushButton_ouvrir_fichier_modulus">
+                                                <property name="minimumSize">
+                                                 <size>
+                                                  <width>100</width>
+                                                  <height>38</height>
+                                                 </size>
+                                                </property>
+                                                <property name="maximumSize">
+                                                 <size>
+                                                  <width>100</width>
+                                                  <height>16777215</height>
+                                                 </size>
+                                                </property>
+                                                <property name="styleSheet">
+                                                 <string notr="true"/>
+                                                </property>
+                                                <property name="text">
+                                                 <string>Ouvrir</string>
+                                                </property>
+                                               </widget>
+                                              </item>
+                                             </layout>
+                                            </item>
+                                           </layout>
+                                          </widget>
+                                         </item>
+                                         <item>
+                                          <widget class="QGroupBox" name="groupBox_27">
+                                           <property name="maximumSize">
+                                            <size>
+                                             <width>16777215</width>
+                                             <height>60</height>
+                                            </size>
+                                           </property>
+                                           <property name="title">
+                                            <string/>
+                                           </property>
+                                           <layout class="QGridLayout" name="gridLayout_27">
+                                            <property name="leftMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="topMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="rightMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="bottomMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <item row="0" column="0">
+                                             <layout class="QHBoxLayout" name="horizontalLayout_13">
+                                              <property name="spacing">
+                                               <number>10</number>
+                                              </property>
+                                              <item>
+                                               <widget class="QLabel" name="label_14">
+                                                <property name="minimumSize">
+                                                 <size>
+                                                  <width>100</width>
+                                                  <height>35</height>
+                                                 </size>
+                                                </property>
+                                                <property name="maximumSize">
+                                                 <size>
+                                                  <width>100</width>
+                                                  <height>35</height>
+                                                 </size>
+                                                </property>
+                                                <property name="styleSheet">
+                                                 <string notr="true">border-width:0px;
+font: 12pt &quot;Arial Black&quot;;
+font-family:bold;
+color: rgba(25, 25, 25,255);
+</string>
+                                                </property>
+                                                <property name="text">
+                                                 <string>Clé privée</string>
+                                                </property>
+                                                <property name="alignment">
+                                                 <set>Qt::AlignCenter</set>
+                                                </property>
+                                               </widget>
+                                              </item>
+                                              <item>
+                                               <widget class="QLineEdit" name="lineEdit_password_dechiff">
+                                                <property name="minimumSize">
+                                                 <size>
+                                                  <width>0</width>
+                                                  <height>38</height>
+                                                 </size>
+                                                </property>
+                                                <property name="maximumSize">
+                                                 <size>
+                                                  <width>16777215</width>
+                                                  <height>38</height>
+                                                 </size>
+                                                </property>
+                                                <property name="styleSheet">
+                                                 <string notr="true">border-width:0px;
+font: 12pt &quot;Arial Black&quot;;
+font-family:bold;
+padding-left:10px;
+color: rgba(25, 25, 25,255);
+
+border-width:3px;
+	border-style:solid;
+	border-color:rgba(128, 135, 223,255);
+	border-radius:15px;
+
+border-color:rgba(100, 150, 120,255);
+</string>
+                                                </property>
+                                               </widget>
+                                              </item>
+                                              <item>
+                                               <widget class="QPushButton" name="pushButton_ouvrir_fichie_cle_privee">
+                                                <property name="minimumSize">
+                                                 <size>
+                                                  <width>100</width>
+                                                  <height>38</height>
+                                                 </size>
+                                                </property>
+                                                <property name="maximumSize">
+                                                 <size>
+                                                  <width>100</width>
+                                                  <height>16777215</height>
+                                                 </size>
+                                                </property>
+                                                <property name="styleSheet">
+                                                 <string notr="true"/>
+                                                </property>
+                                                <property name="text">
+                                                 <string>Ouvrir</string>
+                                                </property>
+                                               </widget>
+                                              </item>
+                                             </layout>
+                                            </item>
+                                           </layout>
+                                          </widget>
+                                         </item>
+                                         <item>
+                                          <widget class="QGroupBox" name="groupBox_28">
+                                           <property name="maximumSize">
+                                            <size>
+                                             <width>16777215</width>
+                                             <height>40</height>
+                                            </size>
+                                           </property>
+                                           <property name="title">
+                                            <string/>
+                                           </property>
+                                           <layout class="QGridLayout" name="gridLayout_28">
+                                            <property name="leftMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="topMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="rightMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="bottomMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <item row="0" column="0">
+                                             <layout class="QHBoxLayout" name="horizontalLayout_14">
+                                              <property name="spacing">
+                                               <number>10</number>
+                                              </property>
+                                              <item>
+                                               <widget class="QLabel" name="label_18">
+                                                <property name="minimumSize">
+                                                 <size>
+                                                  <width>100</width>
+                                                  <height>35</height>
+                                                 </size>
+                                                </property>
+                                                <property name="maximumSize">
+                                                 <size>
+                                                  <width>16777215</width>
+                                                  <height>35</height>
+                                                 </size>
+                                                </property>
+                                                <property name="styleSheet">
+                                                 <string notr="true">border-width:0px;
+font: 12pt &quot;Arial Black&quot;;
+font-family:bold;
+color: rgba(25, 25, 25,255);
+</string>
+                                                </property>
+                                                <property name="text">
+                                                 <string>Chiffré</string>
+                                                </property>
+                                                <property name="alignment">
+                                                 <set>Qt::AlignCenter</set>
+                                                </property>
+                                               </widget>
+                                              </item>
+                                              <item>
+                                               <widget class="QPushButton" name="pushButton_ouvrir_fichier_chiffre">
+                                                <property name="minimumSize">
+                                                 <size>
+                                                  <width>100</width>
+                                                  <height>38</height>
+                                                 </size>
+                                                </property>
+                                                <property name="maximumSize">
+                                                 <size>
+                                                  <width>100</width>
+                                                  <height>16777215</height>
+                                                 </size>
+                                                </property>
+                                                <property name="styleSheet">
+                                                 <string notr="true"/>
+                                                </property>
+                                                <property name="text">
+                                                 <string>Ouvrir</string>
+                                                </property>
+                                               </widget>
+                                              </item>
+                                             </layout>
+                                            </item>
+                                           </layout>
+                                          </widget>
+                                         </item>
+                                         <item>
+                                          <widget class="QGroupBox" name="groupBox_2">
+                                           <property name="minimumSize">
+                                            <size>
+                                             <width>0</width>
+                                             <height>50</height>
+                                            </size>
+                                           </property>
+                                           <property name="title">
+                                            <string/>
+                                           </property>
+                                           <layout class="QGridLayout" name="gridLayout_20">
+                                            <property name="leftMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="topMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="rightMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <property name="bottomMargin">
+                                             <number>0</number>
+                                            </property>
+                                            <item row="0" column="0">
+                                             <layout class="QHBoxLayout" name="horizontalLayout_2">
+                                              <item>
+                                               <widget class="QTextEdit" name="textEdit_fichier_a_dechiffre">
+                                                <property name="styleSheet">
+                                                 <string notr="true">border-width:0px;
+font: 12pt &quot;Arial Black&quot;;
+font-family:bold;
+
+padding-left:10px;
+color: rgba(25, 25, 25,255);
+
+border-width:3px;
+	border-style:solid;
+	border-color:rgba(128, 135, 223,255);
+	border-radius:15px;
+
+
+border-color:rgba(100, 150, 120,255);
+</string>
+                                                </property>
+                                                <property name="html">
+                                                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'12'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                                                </property>
+                                               </widget>
+                                              </item>
+                                              <item>
+                                               <widget class="QGroupBox" name="groupBox_9">
+                                                <property name="minimumSize">
+                                                 <size>
+                                                  <width>50</width>
+                                                  <height>0</height>
+                                                 </size>
+                                                </property>
+                                                <property name="title">
+                                                 <string/>
+                                                </property>
+                                                <layout class="QGridLayout" name="gridLayout_23">
+                                                 <property name="leftMargin">
+                                                  <number>0</number>
+                                                 </property>
+                                                 <property name="topMargin">
+                                                  <number>0</number>
+                                                 </property>
+                                                 <property name="rightMargin">
+                                                  <number>0</number>
+                                                 </property>
+                                                 <property name="bottomMargin">
+                                                  <number>0</number>
+                                                 </property>
+                                                 <item row="0" column="0">
+                                                  <layout class="QVBoxLayout" name="verticalLayout_8">
+                                                   <item>
+                                                    <widget class="QLabel" name="label_2">
+                                                     <property name="text">
+                                                      <string/>
+                                                     </property>
+                                                    </widget>
+                                                   </item>
+                                                   <item>
+                                                    <widget class="QPushButton" name="pushButton_dechiffrer">
+                                                     <property name="minimumSize">
+                                                      <size>
+                                                       <width>100</width>
+                                                       <height>40</height>
+                                                      </size>
+                                                     </property>
+                                                     <property name="maximumSize">
+                                                      <size>
+                                                       <width>100</width>
+                                                       <height>40</height>
+                                                      </size>
+                                                     </property>
+                                                     <property name="styleSheet">
+                                                      <string notr="true"/>
+                                                     </property>
+                                                     <property name="text">
+                                                      <string>Déchiffrer</string>
+                                                     </property>
+                                                    </widget>
+                                                   </item>
+                                                  </layout>
+                                                 </item>
+                                                </layout>
+                                               </widget>
+                                              </item>
+                                             </layout>
+                                            </item>
+                                           </layout>
+                                          </widget>
+                                         </item>
+                                        </layout>
+                                       </item>
+                                      </layout>
+                                     </widget>
+                                    </item>
+                                   </layout>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                              </layout>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QGroupBox" name="groupBox_21">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>0</height>
+                             </size>
+                            </property>
+                            <property name="title">
+                             <string/>
+                            </property>
+                            <layout class="QGridLayout" name="gridLayout_19">
+                             <property name="leftMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="topMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="rightMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="bottomMargin">
+                              <number>0</number>
+                             </property>
+                             <item row="0" column="0">
+                              <layout class="QVBoxLayout" name="verticalLayout_11">
+                               <item>
+                                <widget class="QLabel" name="label_17">
+                                 <property name="minimumSize">
+                                  <size>
+                                   <width>0</width>
+                                   <height>35</height>
+                                  </size>
+                                 </property>
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>16777215</width>
+                                   <height>35</height>
+                                  </size>
+                                 </property>
+                                 <property name="styleSheet">
+                                  <string notr="true">border-width:0px;
+font: 12pt &quot;Arial Black&quot;;
+font-family:bold;
+color: rgba(255, 255, 255,255);
+padding-left:10px;
+background-color: rgba(128, 135, 223,255);
+
+background-color: rgba(100, 150, 120,255);
+
+
+
+
+</string>
+                                 </property>
+                                 <property name="text">
+                                  <string>Texte déchiffré</string>
+                                 </property>
+                                 <property name="alignment">
+                                  <set>Qt::AlignCenter</set>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QTextBrowser" name="textBrowser_texte_clair">
+                                 <property name="styleSheet">
+                                  <string notr="true">border-width:0px;
+font: 12pt &quot;Arial Black&quot;;
+font-family:bold;
+
+padding-left:10px;
+color: rgba(25, 25, 25,255);
+
+border-width:3px;
+	border-style:solid;
+	border-color:rgba(128, 135, 223,255);
+	border-radius:15px;
+
+border-color:rgba(100, 150, 120,255);
+
+</string>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                         </layout>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>804</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionGuide_d_utilisation">
+   <property name="text">
+    <string>Générer une clé AES</string>
+   </property>
+  </action>
+  <action name="actionA_propos">
+   <property name="text">
+    <string>Importer une clé AES</string>
+   </property>
+  </action>
+  <action name="actionConcepteur">
+   <property name="text">
+    <string>Mention legale</string>
+   </property>
+  </action>
+  <action name="actionGuide_d_utilisation_2">
+   <property name="text">
+    <string>Guide d'utilisation</string>
+   </property>
+  </action>
+  <action name="actionA_propos_2">
+   <property name="text">
+    <string>A propos </string>
+   </property>
+  </action>
+  <action name="actionMention_legale">
+   <property name="text">
+    <string>Mention legale</string>
+   </property>
+  </action>
+  <action name="actionEtablir_une_connexion">
+   <property name="text">
+    <string>Etablir une connexion</string>
+   </property>
+  </action>
+  <action name="actionFermer_la_connexion">
+   <property name="text">
+    <string>Fermer la connexion</string>
+   </property>
+  </action>
+  <action name="actionInfo_connexion">
+   <property name="text">
+    <string>Infos connexion</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
